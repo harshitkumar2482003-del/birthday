@@ -1,0 +1,159 @@
+<!DOCTYPE html><html>
+<head>
+<title>Happy Birthday ️Honey</title><style>
+
+body{
+font-family:Arial;
+background:#ffe6f0;
+text-align:center;
+margin:0;
+}
+
+h1{
+margin-top:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:20px;
+}
+
+.card{
+width:150px;
+height:200px;
+perspective:1000px;
+margin:auto;
+cursor:pointer;
+}
+
+.inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.card.flipped .inner{
+transform:rotateY(180deg);
+}
+
+.front,.back{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:10px;
+overflow:hidden;
+backface-visibility:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.front img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.back{
+background:#ff4da6;
+color:white;
+transform:rotateY(180deg);
+padding:20px;
+text-align:left;
+line-height:1.4;
+}
+
+/* popup style */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.popup-card{
+width:300px;
+height:420px;
+perspective:1000px;
+}
+
+</style></head><body><h1>Happy Birthday Honey</h1><div class="gallery"><div class="card" onclick="openCard('photo1.jpg',`You are one of the most beautiful person I have ever met.
+Your smile can change my whole day.
+You make everything around you better.
+I feel lucky to know you.
+Your kindness is something rare.
+Never change who you are.
+Keep smiling always.
+Happy birthday `)">
+<img src="photo1.jpg" width="100%" height="100%">
+</div><div class="card" onclick="openCard('photo2.jpg',`I will also cherish the moment i spend with you.
+You bring light, happiness, joy , funny and adventure in my life.
+You have taken care you me jaise koi bhi nhi kar skta.
+You have supported me, so many time which i always be greatful.
+I personally feel, that you have played a major part in my life. In terms of as a person, my habits and perspective about other things.`)">
+<img src="photo2.jpg" width="100%" height="100%">
+</div><div class="card" onclick="openCard('photo3.jpg',`Your ability to calm the situation is so good.
+Specially when i was panicking and overthinkg. You consistently supporting me. Keep tell sab thik ho jayega.
+So let me tell you some moment which i can't forget.
+During our exams, When Sejal scold at me. And Next day,Taunt maar rahi thi.
+Then You take my stand. 
+I really appreciated that thankyou.
+Next when we were returning from banaras and i was not well. And you take care of me. Constantly Sir dabana aur dawai lagana.` )">
+<img src="photo3.jpg" width="100%" height="100%">
+</div><div class="card" onclick="openCard('photo4.jpg',`FROM THIS PICTURE I WILL ALWAYS REMEMBER OUR BANARAS TRIP.
+It is my one of the best trip so far. There is alot of emotions, happiness and excitement on this trip.
+But One thing, i will never forget is When we were at Kashi Vishwanath Mandir. My hands were full and you noticed. Then you suddenly came to me fir tune paise mere sir pe lagye the fir uske baad Hanuman ji ko chadha diya tha.
+That was really sweet of you.
+I appreciated that <3.`)">
+<img src="photo4.jpg" width="100%" height="100%">
+</div><div class="card" onclick="openCard('photo5.jpg',`I genuinely think that you are lucky for me which i really felt now tbh.
+Since the day, we stop talking. My life is not going easy for me. Anything I do I create mess. Anyway its a part of life.
+If you change your decision. I will really happy but it's your decision. Ik tune bhi kuch sochke liya hoga. 
+But I really really Miss you alot. I may not show but I do.
+I have alot of things to tell you but i am not able to.`)">
+<img src="photo5.jpg" width="100%" height="100%">
+</div><div class="card" onclick="openCard('photo6.jpg',`Since it's your 21st birthday, let just leave this.
+Enjoy your Birthday. Hope you will archive all your goal.
+You are light in darkness. You make people happy around you.
+May God give you peace and strength.
+Once again...
+HAPPY 21st BIRTHDAY TO MY FAVOURITE.`)">
+<img src="photo6.jpg" width="100%" height="100%">
+</div></div><div class="popup" id="popup" onclick="closeCard()"><div class="popup-card card" id="popupCard"><div class="inner"><div class="front">
+<img id="popupImg">
+</div><div class="back" id="popupText"></div></div></div></div><script>
+
+function openCard(img,text){
+
+document.getElementById("popup").style.display="flex"
+
+document.getElementById("popupImg").src=img
+
+document.getElementById("popupText").innerText=text
+
+setTimeout(()=>{
+document.getElementById("popupCard").classList.add("flipped")
+},200)
+
+}
+
+function closeCard(){
+
+document.getElementById("popup").style.display="none"
+
+document.getElementById("popupCard").classList.remove("flipped")
+
+}
+
+</script></body>
+</html>
